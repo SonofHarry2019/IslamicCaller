@@ -9,7 +9,11 @@ public class Time {
     }
 
     public Time(int i){
-        minutes = i * -1;
+        if (i > 0) {
+            minutes = i;
+        }else {
+            minutes = i * -1;
+        }
     }
 
     public String to12HourClock(int time) {
