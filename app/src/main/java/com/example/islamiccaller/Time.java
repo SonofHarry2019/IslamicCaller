@@ -16,6 +16,11 @@ public class Time {
         }
     }
 
+    public int getHour() {
+        int hour = minutes / 60 % 12;
+        return hour;
+    }
+
     public String to12HourClock(int time) {
         String answer = " ";
         if (minutes > 59){
