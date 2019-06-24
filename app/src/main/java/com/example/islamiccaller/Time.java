@@ -8,15 +8,15 @@ public class Time {
         minutes = 75;
     }
 
-    public String to12HourClock(int time) {
-        String answer = " ";
-        if (minutes > 59){
-            time = minutes - 60;
-        }else {
-            time = minutes;
-        }
-        return answer;
-    }
+//    public String to12HourClock(int time) {
+//        String answer = " ";
+//        if (minutes > 59){
+//            time = minutes - 60;
+//        }else {
+//            time = minutes;
+//        }
+//        return answer;
+//    }
 
     public String toString() {
         return minutes + " ";
