@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Time t1 = new Time();
+        System.out.println("75");
         Button bton = (Button) findViewById(R.id.button);
         bton.setText(t1.toString());
     }
