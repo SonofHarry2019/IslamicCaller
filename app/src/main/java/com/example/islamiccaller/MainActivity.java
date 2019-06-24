@@ -11,8 +11,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Time t1 = new Time();
-        System.out.println("The default number is " + t1);
-        Button bton = (Button) findViewById(R.id.button);
-        bton.setText(t1.toString());
+        System.out.println("The default number is " + t1 + "\n");
+        Time t2 = new Time(-1234);
+        System.out.println("\nThe second default number is " + t2);
+
+//        Button bton = (Button) findViewById(R.id.button);
+//        bton.setText(t1.toString());
     }
 }
