@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(" ");
 
         int hr = t2.getHour();
-        System.out.println("The hour for this particular time is " + hr);
+        System.out.println("\nThe hour for this particular time is " + hr);
+
+        int lt = late.addMinutes();
+        System.out.println("\nThe added minutes are " + lt);
     }
 }
