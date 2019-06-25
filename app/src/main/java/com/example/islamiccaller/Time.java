@@ -26,6 +26,15 @@ public class Time {
         return minutes;
     }
 
+    public int getMinutes(){
+        minutes = minutes;
+        return minutes;
+    }
+
+    public int setMinutes(){
+        return 0;
+    }
+
     public String to12HourClock(int time) {
         String answer = " ";
         if (minutes > 59){

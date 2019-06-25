@@ -27,5 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         int lt = late.addMinutes();
         System.out.println("\nThe added minutes are " + lt);
+
+        int t = t1.getMinutes();
+        System.out.println("The number is " + t1);
     }
 }
