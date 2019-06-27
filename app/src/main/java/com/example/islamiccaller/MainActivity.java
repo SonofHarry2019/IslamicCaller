@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         int hr = t2.getHour();
         System.out.println("\nThe hour for this particular time is " + hr);
 
-        int lt = late.addMinutes();
-        System.out.println("\nThe added minutes are " + lt);
+        int sum = addMinutes(3,10);
+        System.out.println("\nThe added minutes are ");
 
         int t = t1.getMinutes();
         System.out.println("The number is " + t1);

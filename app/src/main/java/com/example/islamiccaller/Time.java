@@ -21,9 +21,8 @@ public class Time {
         return hour;
     }
 
-    public int addMinutes() {
-        minutes = minutes + 10;
-        return minutes;
+    public void addMinutes( int mins ) {
+        minutes = minutes + mins;
     }
 
     public int getMinutes(){
