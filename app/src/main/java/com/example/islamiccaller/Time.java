@@ -26,12 +26,15 @@ public class Time {
     }
 
     public int getMinutes(){
-        minutes = minutes;
         return minutes;
     }
 
-    public int setMinutes(){
-        return 0;
+    public void setMinutes(int min){
+        if (min > 0) {
+            minutes = min;
+        }else {
+            minutes = min * -1;
+        }
     }
 
     public String to12HourClock(int time) {
