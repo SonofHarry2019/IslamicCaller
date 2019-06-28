@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         int t = t1.getMinutes();
         System.out.println("The number is " + t1);
 
-        System.out.println("The ");
+        t1.setMinutes(-40);
+        System.out.println("The set minute is " + t1);
     }
 }
