@@ -33,5 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         t1.setMinutes(-40);
         System.out.println("The set minute is " + t1);
+
+        t1.toMinutes(10 , 15,  "AM");
+        System.out.println("The total minutes are " + t1);
     }
 }
