@@ -34,7 +34,14 @@ public class MainActivity extends AppCompatActivity {
         t1.setMinutes(-40);
         System.out.println("The set minute is " + t1);
 
-        t1.toMinutes(14 , 15,  "PM");
+        t1.toMinutes(10 , 15,  "PM");
         System.out.println("The converted minutes are " + t1);
+
+        t1.setMinutes(75);
+        t2.setMinutes(1234);
+        System.out.println("The return value is " + t1.compare(t2));
+
+        t1.swap(t2);
+        System.out.println("t1 is " + t1.getMinutes() + " and t2 is " + t2.getMinutes());
     }
 }

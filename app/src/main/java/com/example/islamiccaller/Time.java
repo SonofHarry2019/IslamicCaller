@@ -38,15 +38,27 @@ public class Time {
     }
 
     public void toMinutes(int hour, int minutes, String AmPm) {
-         if(minutes > 12) {
+        if (AmPm == "AM") {
             this.minutes = (hour * 60) + minutes;
-        }if (12 >= 24) {
-            this.minutes = ((hour - 12) * 60) + minutes;
+        } else {
+            this.minutes = ((hour + 12) * 60) + minutes;
         }
     }
 
-    private int compare() {
-        return 0;
+    public int compare(Time other) {
+        if (minutes == other.getMinutes()){
+            return 0;
+        } else if (minutes > other.getMinutes()){
+            return 1;
+        }else {
+            return -1;
+        }
+    }
+
+    public void swap(Time other){
+        int MinSwap = other.getMinutes();
+        other.setMinutes(minutes);
+        minutes = MinSwap;
     }
 
     public String to12HourClock(int time) {
