@@ -38,7 +38,15 @@ public class Time {
     }
 
     public void toMinutes(int hour, int minutes, String AmPm) {
-        this.minutes =  (hour * 60) + minutes;
+         if(minutes > 12) {
+            this.minutes = (hour * 60) + minutes;
+        }if (12 >= 24) {
+            this.minutes = ((hour - 12) * 60) + minutes;
+        }
+    }
+
+    private int compare() {
+        return 0;
     }
 
     public String to12HourClock(int time) {
