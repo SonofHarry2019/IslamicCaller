@@ -61,6 +61,20 @@ public class Time {
         minutes = MinSwap;
     }
 
+    public void order(Time other){
+        int MinOrder = other.getMinutes();
+        other.setMinutes(minutes);
+        if (minutes > other.getMinutes()) {
+            return;
+        } else {
+            return;
+        }
+    }
+
+    public void getMins(int hour) {
+        this.minutes = hour / 60 % 12;
+    }
+
     public String to12HourClock(int time) {
         String answer = " ";
         if (minutes > 59){
