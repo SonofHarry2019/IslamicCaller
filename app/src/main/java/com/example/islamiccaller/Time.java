@@ -72,7 +72,7 @@ public class Time {
     }
 
     public void getMins(int hour) {
-        this.minutes = hour / 60 % 12;
+        minutes = hour % 60;
     }
 
     public String to12HourClock(int time) {
