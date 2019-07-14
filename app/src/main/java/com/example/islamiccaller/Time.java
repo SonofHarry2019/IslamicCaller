@@ -65,14 +65,14 @@ public class Time {
         int MinOrder = other.getMinutes();
         other.setMinutes(minutes);
         if (minutes > other.getMinutes()) {
-            return;
+            System.out.println(other);
         } else {
-            return;
+            System.out.println(minutes);
         }
     }
 
     public void getMins(int hour) {
-        minutes = hour % 60;
+        minutes = hour %  60;
     }
 
     public String to12HourClock(int time) {
