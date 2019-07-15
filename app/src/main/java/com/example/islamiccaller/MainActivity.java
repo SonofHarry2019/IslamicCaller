@@ -50,5 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         t1.getMins(253);
         System.out.println("The minutes are " + t1);
+
+        t1.getAmorPm();
+        System.out.println("The time is " + t1);
     }
 }
