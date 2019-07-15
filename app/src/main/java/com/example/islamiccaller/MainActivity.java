@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         t1.swap(t2);
         System.out.println("t1 is " + t1.getMinutes() + " and t2 is " + t2.getMinutes());
 
-        System.out.println("The new order is " + t1.getMinutes() + " and " + t2.getMinutes());
+        System.out.println("The new order is " + t1 + " and " + t2);
 
         t1.getMins(253);
         System.out.println("The minutes are " + t1);

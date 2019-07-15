@@ -64,11 +64,6 @@ public class Time {
     public void order(Time other){
         int MinOrder = other.getMinutes();
         other.setMinutes(minutes);
-        if (minutes > other.getMinutes()) {
-            System.out.println(other);
-        } else {
-            System.out.println(minutes);
-        }
     }
 
     public void getMins(int hour) {
