@@ -63,11 +63,16 @@ public class Time {
 
     public void order(Time other){
         int MinOrder = other.getMinutes();
+        if (MinOrder >= minutes) {
+            System.out.println(MinOrder);
+        } else {
+            System.out.println(minutes);
+        }
 
     }
 
     public String getAmorPm() {
-        if (minutes <= 12) {
+        if (minutes <= 11) {
             return "AM";
         }else {
             return "PM";
