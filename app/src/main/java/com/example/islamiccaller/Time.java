@@ -63,12 +63,30 @@ public class Time {
 
     public void order(Time other){
         int MinOrder = other.getMinutes();
-        if (MinOrder >= minutes) {
-            System.out.println(MinOrder);
-        } else {
-            System.out.println(minutes);
+        int t1 = other.getMinutes();
+        if (minutes <= other.getMinutes()) {
+            int hold = minutes;
+            minutes = other.getMinutes();
+            other.setMinutes(hold);
         }
+    }
 
+    public int earlierTime(Time other) {
+        int MinEarly = other.getMinutes();
+        if (MinEarly >= minutes) {
+            return minutes;
+        } else {
+            return MinEarly;
+        }
+    }
+
+    public int laterTime(Time other) {
+        int MinLate = other.getMinutes();
+        if (MinLate >= minutes) {
+            return MinLate;
+        } else {
+            return minutes;
+        }
     }
 
     public String getAmorPm() {
@@ -83,14 +101,17 @@ public class Time {
         minutes = hour %  60;
     }
 
-    public String to12HourClock(int time) {
-        String answer = " ";
+    public String to12HourClock() {
+        int hour = 0;
+        int minute = 0;
         if (minutes > 59){
-            time = minutes - 60;
+            hour = minutes / 60;
+            minute = minutes % 60;
         }else {
-            time = minutes;
+            hour = minutes;
         }
-        return answer;
+        
+        return hour + ":" + minute;
     }
 
     public String toString() {

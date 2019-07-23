@@ -53,5 +53,22 @@ public class MainActivity extends AppCompatActivity {
 
         t1.getAmorPm();
         System.out.println("The time is " + t1);
+
+        t1.setMinutes(195);
+        t2.setMinutes(105);
+        System.out.println("The early minute is " + t1.earlierTime(t2));
+
+        t1.setMinutes(195);
+        t2.setMinutes(105);
+        System.out.println("The late minute is " + t1.laterTime(t2));
+
+        t1.setMinutes(85);
+        t2.setMinutes(75);
+        t2.order(t1);
+        System.out.println("The new order is " + t1 + " and " + t2);
+
+        t1.setMinutes(85);
+        t1.to12HourClock();
+        System.out.println("The standard time is " + t1.to12HourClock());
     }
 }
