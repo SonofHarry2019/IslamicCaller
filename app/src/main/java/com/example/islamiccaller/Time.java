@@ -71,21 +71,24 @@ public class Time {
         }
     }
 
-    public void earlierTime(Time other) {
+    public Time earlierTime(Time other) {
         int MinEarly = other.getMinutes();
         if (MinEarly >= minutes) {
             System.out.println(minutes);
         } else {
-            System.out.println(MinEarly);        }
+            System.out.println(MinEarly);
+        }
+        return other;
     }
 
-    public void laterTime(Time other) {
+    public Time laterTime(Time other) {
         int MinLate = other.getMinutes();
         if (MinLate <= minutes) {
             System.out.println(MinLate);
         } else {
             System.out.println(minutes);
         }
+        return other;
     }
 
     public String getAmorPm() {
