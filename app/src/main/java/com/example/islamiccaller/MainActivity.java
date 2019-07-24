@@ -56,11 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         t1.setMinutes(195);
         t2.setMinutes(105);
-        System.out.println("The early minute is " + t1.earlierTime(t2));
+        t1.order(t2);
+        System.out.println("The early time is " + t2);
 
         t1.setMinutes(195);
         t2.setMinutes(105);
-        System.out.println("The late minute is " + t1.laterTime(t2));
+        t2.order(t1);
+        System.out.println("The late time is " + t2);
 
         t1.setMinutes(85);
         t2.setMinutes(75);

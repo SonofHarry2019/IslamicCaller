@@ -71,21 +71,20 @@ public class Time {
         }
     }
 
-    public int earlierTime(Time other) {
+    public void earlierTime(Time other) {
         int MinEarly = other.getMinutes();
         if (MinEarly >= minutes) {
-            return minutes;
+            System.out.println(minutes);
         } else {
-            return MinEarly;
-        }
+            System.out.println(MinEarly);        }
     }
 
-    public int laterTime(Time other) {
+    public void laterTime(Time other) {
         int MinLate = other.getMinutes();
-        if (MinLate >= minutes) {
-            return MinLate;
+        if (MinLate <= minutes) {
+            System.out.println(MinLate);
         } else {
-            return minutes;
+            System.out.println(minutes);
         }
     }
 
@@ -110,7 +109,6 @@ public class Time {
         }else {
             hour = minutes;
         }
-        
         return hour + ":" + minute;
     }
 
