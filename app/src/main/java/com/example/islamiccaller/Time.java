@@ -61,7 +61,7 @@ public class Time {
         minutes = MinSwap;
     }
 
-    public void order(Time other){
+    public Time order(Time other){
         int MinOrder = other.getMinutes();
         int t1 = other.getMinutes();
         if (minutes <= other.getMinutes()) {
@@ -69,6 +69,7 @@ public class Time {
             minutes = other.getMinutes();
             other.setMinutes(hold);
         }
+        return other;
     }
 
     public Time earlierTime(Time other) {
