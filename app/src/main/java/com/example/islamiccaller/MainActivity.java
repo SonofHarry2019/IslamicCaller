@@ -54,15 +54,35 @@ public class MainActivity extends AppCompatActivity {
         t1.getAmorPm();
         System.out.println("The time is " + t1);
 
-        t1.setMinutes(195);
-        t2.setMinutes(105);
-        t1.order(t2);
-        System.out.println("The early time is " + t2);
+//        t1.setMinutes(195);
+//        t2.setMinutes(105);
+//        t1.order(t2);
+//        System.out.println("The early time is " + t2);
 
-        t1.setMinutes(195);
-        t2.setMinutes(105);
-        t2.order(t1);
-        System.out.println("The late time is " + t2);
+        System.out.println("*");
+        Time earlier = new Time( 1234 );
+        Time later = new Time( 9999 );
+        System.out.println( earlier + " is earlier than " + later );
+
+        System.out.println( earlier.earlierTime(later) + " is the earlier time" );
+        System.out.println( later.earlierTime(earlier) + " this should be the same time as earlier" );
+
+        System.out.println( earlier.laterTime(later) + " is the later time" );
+        System.out.println( later.laterTime(earlier) + " this should be the same time as later" );
+
+        System.out.println( earlier + " is earlier than " + later );
+        earlier.order(later);
+        System.out.println( earlier + " is earlier than " + later );
+
+        System.out.println( later + " is later than " + earlier );
+        later.order(earlier);
+        System.out.println( later + " is earlier than " + earlier );
+        System.out.println("*");
+
+//        t1.setMinutes(195);
+//        t2.setMinutes(105);
+//        t2.order(t1);
+//        System.out.println("The late time is " + t2);
 
         t1.setMinutes(85);
         t2.setMinutes(75);

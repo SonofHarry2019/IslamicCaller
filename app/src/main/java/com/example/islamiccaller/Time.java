@@ -82,6 +82,8 @@ public class Time {
         return other;
     }
 
+
+
     public Time laterTime(Time other) {
         int MinLate = other.getMinutes();
         if (MinLate <= minutes) {
