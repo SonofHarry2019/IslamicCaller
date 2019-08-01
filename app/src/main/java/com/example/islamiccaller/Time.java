@@ -102,8 +102,8 @@ public class Time {
     }
 
     public String to12HourClock() {
-        int hour = 0;
-        int minute = 0;
+        int hour;
+        int minute;
         if (minutes > 59){
             hour = minutes / 60;
             minute = minutes % 60;
@@ -111,10 +111,10 @@ public class Time {
             hour = 0;
             minute = minutes;
         }
-        return hour + ":" + minute + " " + getAmorPm();
+        return hour + ":" + String.format("%02d", minute) + " " + getAmorPm();
     }
 
     public String toString() {
-        return minutes + " ";
+        return to12HourClock();
     }
 }
