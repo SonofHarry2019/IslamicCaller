@@ -3,6 +3,8 @@ package com.example.islamiccaller;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -54,12 +56,6 @@ public class MainActivity extends AppCompatActivity {
         t1.getAmorPm();
         System.out.println("The time is " + t1);
 
-//        t1.setMinutes(195);
-//        t2.setMinutes(105);
-//        t1.order(t2);
-//        System.out.println("The early time is " + t2);
-
-        System.out.println("*");
         Time earlier = new Time( 1234 );
         Time later = new Time( 9999 );
         System.out.println( earlier + " is earlier than " + later );
@@ -77,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
         System.out.println( later + " is later than " + earlier );
         later.order(earlier);
         System.out.println( later + " is earlier than " + earlier );
-        System.out.println("*");
-
-//        t1.setMinutes(195);
-//        t2.setMinutes(105);
-//        t2.order(t1);
-//        System.out.println("The late time is " + t2);
 
         t1.setMinutes(85);
         t2.setMinutes(75);
@@ -92,5 +82,18 @@ public class MainActivity extends AppCompatActivity {
         t1.setMinutes(3);
         t1.to12HourClock();
         System.out.println("The standard time is " + t1.to12HourClock());
+
+        ArrayList<Integer> nums = new ArrayList();
+        nums.add(10);
+        nums.add(20);
+        nums.add(30);
+        System.out.println(nums);
+
+        ArrayList<Time> time = new ArrayList();
+        time.add(t1);
+        time.add(t2);
+        time.add(early);
+        time.add(late);
+        System.out.println(time);
     }
 }
