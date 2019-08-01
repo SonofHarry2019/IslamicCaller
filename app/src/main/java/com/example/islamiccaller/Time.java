@@ -110,7 +110,7 @@ public class Time {
         }else {
             hour = minutes;
         }
-        return hour + ":" + minute;
+        return hour + ":" + minute + " " + getAmorPm();
     }
 
     public String toString() {
