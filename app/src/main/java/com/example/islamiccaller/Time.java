@@ -61,15 +61,14 @@ public class Time {
         minutes = MinSwap;
     }
 
-    public Time order(Time other){
+    public void order(Time other){
         int MinOrder = other.getMinutes();
         int t1 = other.getMinutes();
-        if (minutes <= other.getMinutes()) {
+        if (minutes >= other.getMinutes()) {
             int hold = minutes;
             minutes = other.getMinutes();
             other.setMinutes(hold);
         }
-        return other;
     }
 
     public Time earlierTime(Time other) {
@@ -85,9 +84,9 @@ public class Time {
 //        int mins1 = other.minutes;
 //        int mins2 = this.minutes;
         if( other.minutes < this.minutes )
-            return other;
-        else
             return this;
+        else
+            return other;
     }
 
     public String getAmorPm() {
