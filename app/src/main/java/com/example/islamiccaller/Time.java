@@ -108,7 +108,8 @@ public class Time {
             hour = minutes / 60;
             minute = minutes % 60;
         }else {
-            hour = minutes;
+            hour = 0;
+            minute = minutes;
         }
         return hour + ":" + minute + " " + getAmorPm();
     }

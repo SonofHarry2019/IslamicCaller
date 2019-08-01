@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         t2.order(t1);
         System.out.println("The new order is " + t1 + " and " + t2);
 
-        t1.setMinutes(483);
+        t1.setMinutes(3);
         t1.to12HourClock();
         System.out.println("The standard time is " + t1.to12HourClock());
     }
