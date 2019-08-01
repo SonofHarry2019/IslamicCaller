@@ -73,21 +73,21 @@ public class Time {
     }
 
     public Time earlierTime(Time other) {
-    int mins1 = other.minutes;
-    int mins2 = this.minutes;
-        if( mins1 > this.minutes )
+//    int mins1 = other.minutes;
+//    int mins2 = this.minutes;
+        if( other.minutes > this.minutes )
             return this;
         else
             return other;
     }
 
     public Time laterTime(Time other) {
-        int mins1 = other.minutes;
-        int mins2 = this.minutes;
-        if( mins1 < this.minutes )
-            return this;
-        else
+//        int mins1 = other.minutes;
+//        int mins2 = this.minutes;
+        if( other.minutes < this.minutes )
             return other;
+        else
+            return this;
     }
 
     public String getAmorPm() {
