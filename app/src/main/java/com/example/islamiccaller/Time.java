@@ -72,19 +72,19 @@ public class Time {
         return other;
     }
 
-    public Time earlierTime( Time other ) {
-    int mins1 = other.getMinutes();
-    int mins2 = other.getMinutes();
-        if( mins1 > mins2 )
+    public Time earlierTime(Time other) {
+    int mins1 = other.minutes;
+    int mins2 = this.minutes;
+        if( mins1 > this.minutes )
             return this;
         else
             return other;
     }
 
-    public Time laterTime( Time other ) {
-        int mins1 = other.getMinutes();
-        int mins2 = other.getMinutes();
-        if( mins1 < mins2 )
+    public Time laterTime(Time other) {
+        int mins1 = other.minutes;
+        int mins2 = this.minutes;
+        if( mins1 < this.minutes )
             return this;
         else
             return other;
