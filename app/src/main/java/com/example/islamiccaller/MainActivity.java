@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
         t1.setMinutes(3);
         t1.to12HourClock();
         System.out.println("The standard time is " + t1.to12HourClock());
+
+        Random clock = new Random();
+        int ti;
+        for (int i = 1; i <= 1; i++) {
+            ti = 1 + clock.nextInt(24);
+            System.out.println("The random time is " + ti);
+            System.out.println("The random time is " + ti * 60);
+        }
 
         ArrayList<Integer> nums = new ArrayList();
         nums.add(10);

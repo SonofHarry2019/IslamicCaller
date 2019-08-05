@@ -72,8 +72,6 @@ public class Time {
     }
 
     public Time earlierTime(Time other) {
-//    int mins1 = other.minutes;
-//    int mins2 = this.minutes;
         if( other.minutes > this.minutes )
             return this;
         else
@@ -81,8 +79,6 @@ public class Time {
     }
 
     public Time laterTime(Time other) {
-//        int mins1 = other.minutes;
-//        int mins2 = this.minutes;
         if( other.minutes < this.minutes )
             return this;
         else
