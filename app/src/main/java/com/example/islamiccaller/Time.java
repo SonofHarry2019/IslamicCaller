@@ -1,5 +1,7 @@
 package com.example.islamiccaller;
 
+import java.util.Random;
+
 public class Time {
     // to store values in the instance variable
     private int minutes;
@@ -112,5 +114,16 @@ public class Time {
 
     public String toString() {
         return to12HourClock();
+    }
+
+    public Random randomTime(){
+        Random clock = new Random();
+        int ti;
+        for (int i = 1; i <= 1; i++) {
+            ti = 1 + clock.nextInt(24);
+            System.out.println("The random time is " + ti);
+            System.out.println("The random time is " + ti * 60);
+        }
+        return clock;
     }
 }

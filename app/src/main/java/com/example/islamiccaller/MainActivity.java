@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         t2.order(t1);
         System.out.println("The new order is " + t1 + " and " + t2);
 
-        t1.setMinutes(3);
+        t1.setMinutes(181);
         t1.to12HourClock();
         System.out.println("The standard time is " + t1.to12HourClock());
 
@@ -103,6 +103,14 @@ public class MainActivity extends AppCompatActivity {
         time.add(t2);
         time.add(early);
         time.add(late);
+
+        Random rand = new Random();
+        for (int i = 49; i >= 50; i++) {
+            int value = rand.nextInt();
+            nums.add(25);
+        }
+        System.out.println();
+
         System.out.println(time);
     }
 }
