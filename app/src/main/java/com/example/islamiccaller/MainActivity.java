@@ -104,12 +104,20 @@ public class MainActivity extends AppCompatActivity {
         time.add(early);
         time.add(late);
 
+        double sum = 0;
+        for (Time i : time) {
+            sum += 1;
+        }
+        double average = sum / time.size();
+
+        System.out.println("The average is " + average);
+
         Random rand = new Random();
         for (int i = 49; i >= 50; i++) {
             int value = rand.nextInt();
             nums.add(25);
+            System.out.println("The added value 7" + value);
         }
-        System.out.println();
 
         System.out.println(time);
     }
