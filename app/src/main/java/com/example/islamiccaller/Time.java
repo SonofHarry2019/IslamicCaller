@@ -116,14 +116,12 @@ public class Time {
         return to12HourClock();
     }
 
-    public Random randomTime(){
+    public Time randomTime(){
         Random clock = new Random();
-        int ti;
+        int ti = 0;
         for (int i = 1; i <= 1; i++) {
-            ti = 1 + clock.nextInt(24);
-            System.out.println("The random time is " + ti);
-            System.out.println("The random time is " + ti * 60);
+            ti = 1 + clock.nextInt(24) * 60;
         }
-        return clock;
+        return ti;
     }
 }
