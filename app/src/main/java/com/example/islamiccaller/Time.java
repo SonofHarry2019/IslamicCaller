@@ -122,6 +122,6 @@ public class Time {
         for (int i = 1; i <= 1; i++) {
             ti = 1 + clock.nextInt(24) * 60;
         }
-        return ti;
+        return Time;
     }
 }
