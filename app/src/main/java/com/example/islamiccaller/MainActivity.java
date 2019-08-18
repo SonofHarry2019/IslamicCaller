@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Time> time = new ArrayList();
         for(int i = 0; i < num; i++){
             time.add(new Time());
-        }f
+        }
         return time;
     }
 
