@@ -84,8 +84,7 @@ public class MainActivity extends AppCompatActivity {
         t1.to12HourClock();
         System.out.println("The standard time is " + t1.to12HourClock());
 
-        t2 = t1.randomTime();
-        System.out.println("The random time is " + t2);
+        System.out.println("The random time is ");
 
         ArrayList<Integer> nums = new ArrayList();
         nums.add(10);
@@ -98,22 +97,96 @@ public class MainActivity extends AppCompatActivity {
         time.add(t2);
         time.add(early);
         time.add(late);
+        System.out.println(time);
 
-        double sum = 0;
-        for (Time i : time) {
-            sum += 1;
-        }
-        double average = sum / time.size();
+        ArrayList<Time> list = createTimeList(7);
+        System.out.println("The added time is " + list);
 
-        System.out.println("The average is " + average);
+        System.out.println("The average time is " + averageTime(time));
 
-        Random rand = new Random();
-        for (int i = 49; i >= 50; i++) {
-            int value = rand.nextInt();
-            nums.add(25);
-            System.out.println("The added value " + value);
-        }
+        System.out.println("The max time is " + getMaxIndex(time));
+
+        System.out.println("The minimum time is " + getMinimumMinutes(time));
 
         System.out.println(time);
+        swap(time, 1, 2);
+        System.out.println("The swapped time is " + time);
+
+        System.out.println("The list is sorted?: " + isSorted(time));
+
+        InsertionSort(time);
+        System.out.println("The list is sorted?: " + isSorted(time));
+
+    }
+
+    public static ArrayList<Time> createTimeList(int num){
+        ArrayList<Time> time = new ArrayList();
+        for(int i = 0; i < num; i++){
+            time.add(new Time());
+        }
+        return time;
+    }
+
+    public static double averageTime(ArrayList<Time> time){
+        double total = 0;
+        for(int i = 0; i < time.size(); i++){
+            total = total + time.get(i).getMinutes();
+        }
+        return total/time.size();
+    }
+
+    ///Scope
+    public static int getMaxIndex(ArrayList<Time> time){
+        int max = time.get(0).getMinutes();
+        int max_index = 0;
+        for(int i = 1; i < time.size(); i++){
+            if(time.get(i).getMinutes() > max){
+                max = time.get(i).getMinutes();
+                max_index = i;
+            }
+        }
+        return max_index;
+    }
+
+    public static void setTime(ArrayList<Time> list, int index, int new_minutes){
+        list.get(index).setMinutes(new_minutes);
+    }
+
+    public static int getMinimumMinutes(ArrayList<Time> time){
+        int min = time.get(0).getMinutes();
+        for(int i = 1; i < time.size(); i++){
+            if(time.get(i).getMinutes() < min){
+                min = time.get(i).getMinutes();
+            }
+        }
+        return min;
+    }
+
+    public static void swap(ArrayList<Time> time, int index1, int index2){
+        Time temp = time.get(index1);
+        time.set(index1, time.get(index2));
+        time.set(index2, temp);
+    }
+
+    public static boolean isSorted(ArrayList<Time> time){
+        for(int i = 0; i < time.size() - 1; i++){
+            if(time.get(i).getMinutes() > time.get(i+1).getMinutes()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void InsertionSort(ArrayList<Time> time){
+        for(int j = 1; j < time.size(); j++){
+            int key_minutes = time.get(j).getMinutes();
+            Time key = time.get(j);
+            int i = j - 1;
+            while( i >= 0 && time.get(i).getMinutes() > key_minutes){
+                time.set(i+1, time.get(i));
+                i--;
+            }
+            time.set(i+1, key);
+        }
     }
 }
