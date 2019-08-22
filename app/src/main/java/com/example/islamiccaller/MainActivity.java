@@ -99,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         time.add(late);
         System.out.println(time);
 
+        System.out.println();
+
         ArrayList<Time> list = createTimeList(7);
         System.out.println("The added time is " + list);
 
@@ -121,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static ArrayList<Time> createTimeList(int num){
         ArrayList<Time> time = new ArrayList();
-        for(int i = 0; i < num; i++){
+        for(int i = 0; i < 6; i++){
             time.add(new Time());
         }
         return time;

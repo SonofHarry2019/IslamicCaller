@@ -117,6 +117,6 @@ public class Time {
     }
 
     public static Time randomTime(){
-        return new Time((int)(Math.random() * 24 * 60));
+        return new Time((int)(Math.random() * 6));
     }
 }
