@@ -84,8 +84,6 @@ public class MainActivity extends AppCompatActivity {
         t1.to12HourClock();
         System.out.println("The standard time is " + t1.to12HourClock());
 
-        System.out.println("The random time is ");
-
         ArrayList<Integer> nums = new ArrayList();
         nums.add(10);
         nums.add(20);
@@ -102,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println();
 
         ArrayList<Time> list = createTimeList(7);
-        System.out.println("The added time is " + list);
+        System.out.println("The added list is " + list);
 
         System.out.println("The average time is " + averageTime(time));
 
@@ -122,8 +120,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static ArrayList<Time> createTimeList(int num){
+        num = 4;
         ArrayList<Time> time = new ArrayList();
-        for(int i = 0; i < 6; i++){
+        for(int i = 0; i < num; i++){
             time.add(new Time());
         }
         return time;
